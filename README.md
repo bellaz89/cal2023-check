@@ -2,6 +2,10 @@
 
 These scripts have the purpouse of checking the correctness of the algorithms contained in the paper [Calibration of superconducting radio-frequency cavity forward and reflected channels based on stored energy dynamics](./Calibration_of_superconducting_radio_frequency_cavity_forward_and_reflected_channels_based_on_stored_energy_dynamics.pdf)
 
+## ! DO NOT DIVULGE !
+
+<u>This repository is for the coauthors of the paper only and other member of MSK involved. Please do not share any part of it!</u>.
+
 ## Before starting
 
 Make sure the following packages are installed:
