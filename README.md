@@ -1,6 +1,6 @@
 # Scripts to verify the paper 'Calibration of superconducting radio-frequency cavity forward and reflected channels based on stored energy dynamics'
 
-These scripts have the purpouse of checking the correctness of the algorithms contained in the paper [Calibration_of_superconducting_radio_frequency_cavity_forward_and_reflected_channels_based_on_stored_energy_dynamics](Calibration of superconducting radio-frequency cavity forward and reflected channels based on stored energy dynamics)
+These scripts have the purpouse of checking the correctness of the algorithms contained in the paper [Calibration of superconducting radio-frequency cavity forward and reflected channels based on stored energy dynamics](./Calibration_of_superconducting_radio_frequency_cavity_forward_and_reflected_channels_based_on_stored_energy_dynamics)
 
 ## Before starting
 
