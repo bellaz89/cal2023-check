@@ -40,7 +40,7 @@ matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulatiom.m');exit;"
 
 ```
 
-## test2
+## test3
 
 This test verifies if Andrea's implementation of the *Energy Constrained* algorithm is capable of finding the calibration coefficients. A simulation provided by Sven is used.
 
