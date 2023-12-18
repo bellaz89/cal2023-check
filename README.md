@@ -16,7 +16,7 @@ If you want to regenerate the simulation data, make sure to have *Matlab* with t
 
 ## test1
 
-This test verifies if Andrea's implementation of [1] with $k_{add} = 1$  Matches Sven's implementation.
+This test verifies if Andrea's implementation of [1] with $k_{add} = 1$ matches Sven's implementation. A simulation provided by Sven is used.
 
 ### Regenerate the simulation data
 
@@ -27,7 +27,7 @@ matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulatiom.m');exit;"
 
 ## test2
 
-This test verifies if Andrea's implementation of [1] with $k_{add} = 2.69595 e^{j\frac{118.7687 \pi}{180}}$  Matches Sven's implementation.
+This test verifies if Andrea's implementation of [1] with $k_{add} = 2.69595 e^{j\frac{118.7687 \pi}{180}}$ matches Sven's implementation. A simulation provided by Sven is used.
 
 ### Regenerate the simulation data
 
@@ -35,6 +35,10 @@ This test verifies if Andrea's implementation of [1] with $k_{add} = 2.69595 e^{
 matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulatiom.m');exit;"
 
 ```
+
+## test2
+
+This test verifies if Andrea's implementation of the *Energy Constrained* algorithm is capable of finding the calibration coefficients. A simulation provided by Sven is used.
 
 ### Regenerate the datafile
 
