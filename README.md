@@ -39,7 +39,8 @@ matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulatiom.m');exit;"
 ### Regenerate the datafile
 
 ```shell
-  matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_SIMULATION'); exit;"
+  matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulation.m'); exit;"
+
 ```
 
 [\[1\] Pfeiffer, Sven, et al. "Virtual cavity probe generation using calibrated forward and reflected signals." MOPWA040, These Proceedings, IPAC 15 \(2015\).](https://accelconf.web.cern.ch/IPAC2015/papers/mopwa040.pdf)
