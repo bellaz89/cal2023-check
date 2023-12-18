@@ -7,6 +7,7 @@ Make sure the following packages are installed:
 - python3
 - numpy
 - scipy
+- numba
 
 If you want to regenerate the simulation data, make sure to have *Matlab* installed.
 
