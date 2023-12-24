@@ -2,11 +2,12 @@ import numpy as np
 import numba
 from numba import njit
 
-@njit(fastmath=True)
-def simulate_luenberger(fwd, prb, bandwidth, detuning,
-                        fs, gain_bw, a_threshold):
+#@njit(fastmath=True)
+def luenberger(fwd, prb, hbw, detuning,
+             fs, gain_bw, a_threshold):
 
-    max_ampsq = np.max(prb[:, 0]**2 + prb[:, 1]**2)
+    bandwidth = hbw * 2
+    max_ampsq = np.max(prb[:, 0]**2 + prb[:, 1])
     div_lim = a_threshold * max_ampsq
 
     samples = fwd.shape[0]
@@ -14,6 +15,7 @@ def simulate_luenberger(fwd, prb, bandwidth, detuning,
     x = np.zeros((samples, 4))
     xpred = np.zeros((samples, 4))
 
+    x[0, 2] = -0.5
     x[0, 3] = detuning/bandwidth
 
     A = np.zeros((samples, 4, 4))
@@ -55,8 +57,8 @@ def simulate_luenberger(fwd, prb, bandwidth, detuning,
         A[i, 0, 3] =   x[i-1, 1] * rot_diff
         A[i, 1, 2] = - x[i-1, 1] * rot_diff
         A[i, 1, 3] = - x[i-1, 0] * rot_diff
-
-        xpred[i, :] = np.dot(A[i, :, :], x[i-1, :]) + np.dot(B, fwd[i-1, :])
+        
+        xpred[i, :] = np.dot(A[i, :, :], x[i-1, :]) + np.dot(B, fwd[i-1, :]) 
 
         # updating
 
@@ -76,5 +78,7 @@ def simulate_luenberger(fwd, prb, bandwidth, detuning,
         K[i, 3, 0] *=  x[i, 1]
         K[i, 3, 1] *= -x[i, 0]
 
+    x[:, 2] = bandwidth * (1.0 + x[:, 2])
+    x[:, 3] *= bandwidth
     return x
 
