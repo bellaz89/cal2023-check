@@ -74,6 +74,8 @@ matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulatiom.m');exit;"
 
 This test verifies if Andrea's implementation of the *Energy Constrained* algorithm is capable of finding the calibration coefficients. A simulation provided by Sven is used.
 
+The results are compared to the ground thruth and the *hand tuned* algorithm from [1]
+
 ```
 $python test_energy_constr_impl.py 
 Sim/Sven/Andrea-energy based constr.|a: (0.961172366939915+0.169480621402924j) (0.9612717667006472+0.16943848897527955j) (0.9612004162355136+0.16947032954577948j)
