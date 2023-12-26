@@ -109,6 +109,18 @@ Sven's algorithm diff wrt. ground%|d: 0.0011398388746484249 normalized to b+d
 
 ```
 
+## test4
+
+This test verifies if Andrea's implementation of the *Energy Constrained* algorithm is capable of finding the calibration coefficients. A simulation provided by Sven is used. **In this test a correlated noise is added to the traces**
+The results are compared to the ground thruth and the *hand tuned* algorithm from [1]
+
+### Regenerate the datafile
+
+```shell
+  matlab -nodisplay -nosplash -nodesktop -r "run('FORW_REFL_simulation.m'); exit;"
+
+```
+
 ---
 
 [\[1\] Pfeiffer, Sven, et al. "Virtual cavity probe generation using calibrated forward and reflected signals." MOPWA040, These Proceedings, IPAC 15 \(2015\).](https://accelconf.web.cern.ch/IPAC2015/papers/mopwa040.pdf)
