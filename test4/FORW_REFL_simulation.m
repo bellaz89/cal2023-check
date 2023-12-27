@@ -28,7 +28,7 @@ VF(1:fs*t_fill,1) = VF_scalar(1);
 VF(fs*t_fill+1:fs*(t_fill+t_flat),1) = VF_scalar(2);
 VF(fs*(t_fill+t_flat)+1:fs*(t_fill+t_flat+t_decay),1) = VF_scalar(3);
 
-VF = VF + smooth(randn(length(VF),1)*kly_noise_std,1) + smooth(randn(kly_noise_std,1)*0.01,1) * 1j;
+VF = VF + smooth(randn(length(VF),1)*kly_noise_std,1) + smooth(randn(length(VF),1)*kly_noise_std,1) * 1j;
 
 % VP simulation without detuning
 GS = 2*w12/(s+w12-1j*dw);
@@ -111,9 +111,9 @@ VR_dist = VR_meas_b+VR_meas_d;
 % use inverse of coupling matrix to map disturbed common forw and refl. to
 % measured forw and refl.
 coeff_inv = inv([a b ; c d]);
-VP_meas_dist = VP + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(meas_noise_std,1)*0.01,1) * 1j
-VF_meas_dist = VF_dist*coeff_inv(1,1) + VR_dist*coeff_inv(1,2) + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(meas_noise_std,1)*0.01,1) * 1j;
-VR_meas_dist = VF_dist*coeff_inv(2,1) + VR_dist*coeff_inv(2,2) + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(meas_noise_std,1)*0.01,1) * 1j;
+VP_meas_dist = VP + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(length(VF),1)*meas_noise_std,1) * 1j
+VF_meas_dist = VF_dist*coeff_inv(1,1) + VR_dist*coeff_inv(1,2) + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(length(VF),1)*meas_noise_std,1) * 1j;
+VR_meas_dist = VF_dist*coeff_inv(2,1) + VR_dist*coeff_inv(2,2) + smooth(randn(length(VF),1)*meas_noise_std,1) + smooth(randn(length(VF),1)*meas_noise_std,1) * 1j;
 % plot measured signals
 figure(2)
 clf
