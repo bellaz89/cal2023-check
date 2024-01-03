@@ -11,6 +11,7 @@ with warnings.catch_warnings():
 #Loads the data from the simulation
 hbw0 = float(dataset["w12"]) * 0.5 / np.pi
 fs = float(dataset["fs"])
+print("Fs:", fs, "Hz")
 flattop_time = float(dataset["t1"])/fs
 decay_time = float(dataset["t2"])/fs
 

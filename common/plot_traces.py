@@ -25,6 +25,9 @@ def plot_traces(title, fs, probe_cmplx, vforw_cmplx, vrefl_cmplx, abcd, filter_b
     ax_amp.plot(time_trace, np.abs(probe_cmplx), label="Probe")
     ax_amp.plot(time_trace, np.abs(vforw_cmplx), label="Forward")
     ax_amp.plot(time_trace, np.abs(vforw_cmplx_corr), label="Forward calibrated")
+
+    ax_amp.legend()
+
     probe = np.column_stack((np.real(probe_cmplx), np.imag(probe_cmplx)))
     vforw = np.column_stack((np.real(vforw_cmplx), np.imag(vforw_cmplx)))
     vforw_corr = np.column_stack((np.real(vforw_cmplx_corr), np.imag(vforw_cmplx_corr)))
